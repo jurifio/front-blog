@@ -23,6 +23,19 @@
             "methods": [
                 "GET"
             ]
+        },
+        {
+            "pattern": "/:loc/blog/:postTitle/:postId",
+            "behaviour": {},
+            "filters": {
+                "loc": "[a-z]{2}",
+                "postTitle": "[a-zA-Z0-9-_]{255}",
+                "postId": "[0-9]+"
+            },
+            "translations": {},
+            "methods": [
+                "GET"
+            ]
         }
     ]
 }
