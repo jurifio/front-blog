@@ -14,7 +14,7 @@
         {
             "pattern": "/:loc/blog(/)?",
             "behaviour": {
-                "ctrl": "\\bamboo\\site\\controllers\\CBlogHomepageController"
+                "ctrl": "\\bamboo\\blog\\controllers\\CBlogHomepageController"
             },
             "filters": {
                 "loc": "[a-z]{2}"
