@@ -29,7 +29,7 @@ class CBlogHomepageController extends ARootController
         $this->app->authManager->auth();
         $filters = $this->app->router->getMatchedRoute()->getComputedFilters();
 
-        $request = new CInternalRequest("CBlogHomepage.default",$filters['loc'],$filters,$this->app->router->request()->getMethod(),$action);
+        $request = new CInternalRequest("CBlogSingle.default",$filters['loc'],$filters,$this->app->router->request()->getMethod(),$action);
         return $this->{$action}($request);
     }
 
