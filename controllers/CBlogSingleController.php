@@ -10,7 +10,7 @@ use bamboo\ecommerce\views\VBase;
 use bamboo\core\theming\CWidgetHelper;
 
 /**
- * Class CBlogHomepageController
+ * Class CBlogSingleController
  * @package bamboo\front\site\controllers
  *
  * @author Bambooshoot Team <emanuele@bambooshoot.agency>
@@ -22,7 +22,7 @@ use bamboo\core\theming\CWidgetHelper;
  * @date 18/04/2016
  * @since 1.0
  */
-class CBlogHomepageController extends ARootController
+class CBlogSingleController extends ARootController
 {
     public function createAction($action)
     {
@@ -45,7 +45,7 @@ class CBlogHomepageController extends ARootController
 
         $view = new VBase($hub->dispatch());
         $view->setTemplatePath($this->app->rootPath().$this->app->cfg()->fetch('paths','store-theme').'/widgets/document.php');
-        $view->setAssets($ac,'bloghome',$this->app);
+        $view->setAssets($ac,'blogsingle',$this->app);
         $view->setHeadTags($this->app->getBubbledObj('headTags'));
         return $view->render([
             'app' =>  new CWidgetHelper($this->app)
