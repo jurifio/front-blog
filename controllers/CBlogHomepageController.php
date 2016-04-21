@@ -45,7 +45,7 @@ class CBlogHomepageController extends ARootController
 
         $view = new VBase($hub->dispatch());
         $view->setTemplatePath($this->app->rootPath().$this->app->cfg()->fetch('paths','store-theme').'/widgets/document.php');
-        $view->setAssets($ac,'bloghome',$this->app);
+        $view->setAssets($ac,'blogsingle',$this->app);
         $view->setHeadTags($this->app->getBubbledObj('headTags'));
         return $view->render([
             'app' =>  new CWidgetHelper($this->app)

@@ -21,7 +21,7 @@ class CBlogArticleListController extends ANodeController {
         $this->fetchData();
         $this->view->pass('app', $this->helper);
         $this->view->pass('data', $this->dataBag);
-
+        $this->view->pass('domain', $this->app->cfg()->fetch("paths","domain"));
         return $this->show();
         //\Blueseal::dump($this->dataBag);
         //throw new \Exception();

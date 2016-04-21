@@ -12,12 +12,19 @@
     ],
     "routes": [
         {
-            "pattern": "/:loc/blog(/)?",
+            "pattern": "/:loc/blog(/tag/:tag/:tagId)?(/category/:category/:categoryId)?(/author/:author/:authorId)?(/)?",
             "behaviour": {
                 "ctrl": "\\bamboo\\blog\\controllers\\CBlogHomepageController"
             },
             "filters": {
-                "loc": "[a-z]{2}"
+                "loc": "[a-z]{2}",
+                "tag": "[a-zA-Z0-9-]+",
+                "tagId": "[0-9]+",
+                "category": "[a-zA-Z0-9-]+",
+                "categoryId": "[0-9]+",
+                "author": "[a-zA-Z0-9-]+",
+                "authorId": "[0-9]+"
+
             },
             "translations": {},
             "methods": [
@@ -31,8 +38,8 @@
             },
             "filters": {
                 "loc": "[a-z]{2}",
-                "postTitle": "[a-zA-Z0-9-_]{255}",
-                "postId": "[0-9]+"
+                "postId": "[0-9]+",
+                "postTitle": "[a-z0-9-]+"
             },
             "translations": {},
             "methods": [
