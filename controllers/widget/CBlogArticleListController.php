@@ -14,7 +14,6 @@ class CBlogArticleListController extends ANodeController {
         //carico il template
         $this->view = new VBase($this->response->getChildren());
         $this->view->setTemplatePath($this->config['template']['fullpath']);
-
         // organizzo i dati in ingresso. json, PandORM, o Mixed, in base
         // alla configurazione
 
@@ -23,8 +22,6 @@ class CBlogArticleListController extends ANodeController {
         $this->view->pass('data', $this->dataBag);
         $this->view->pass('domain', $this->app->cfg()->fetch("paths","domain"));
         return $this->show();
-        //\Blueseal::dump($this->dataBag);
-        //throw new \Exception();
     }
 
 
