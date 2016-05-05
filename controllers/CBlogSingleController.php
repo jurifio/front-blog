@@ -23,41 +23,6 @@ use bamboo\core\theming\CWidgetHelper;
  * @since 1.0
  */
 
-// blog/dev.routes.json per i post singoli una volta che sarà implementata la repo
-//    {
-//        "pattern": "/:loc/blog/:postTitle/:postId",
-//            "behaviour": {},
-//            "filters": {
-//        "loc": "[a-z]{2}",
-//                "postTitle": "[a-zA-Z0-9-_]{255}",
-//                "postId": "[0-9]+"
-//            },
-//            "translations": {},
-//            "methods": [
-//        "GET"
-//    ]
-//        }
-
-
-
-
-
-
-
-// CContent.blogSingle data
-//"data": {
-//    "default": {
-//        "src": "mixed",
-//                "repository": "Post",
-//                "type": "entity",
-//                "method": "Id",
-//                "params": ["postId","postTitle"],
-//                "args": [],
-//                "sorting": [],
-//                "offset": "0",
-//                "limit": "9"
-//            }
-//        },
 class CBlogSingleController extends ARootController
 {
     public function createAction($action)
