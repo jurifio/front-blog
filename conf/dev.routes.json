@@ -2,14 +2,6 @@
     "error": {
         "404": "/themes/flatize/404.php"
     },
-    "hosts": [
-        "www.pickyshop.com",
-        "pickyshop.com",
-        "debug.pickyshop.clo.ud.it",
-        "dev.pickyshop.com",
-        "stage.pickyshop.com",
-        "localhost"
-    ],
     "routes": [
         {
             "pattern": "/:loc/blog(/tag/:tag/:postTagId)?(/category/:category/:postCategoryId)?(/author/:author/:authorId)?(/)?",
