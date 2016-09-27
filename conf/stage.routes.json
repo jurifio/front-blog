@@ -5,6 +5,7 @@
     "hosts": [],
     "routes": [
         {
+            "name": "Blog - Lista",
             "pattern": "/:loc/blog(/tag/:tag/:postTagId)?(/category/:category/:postCategoryId)?(/author/:author/:authorId)?(/)?",
             "behaviour": {
                 "ctrl": "\\bamboo\\blog\\controllers\\CBlogHomepageController"
@@ -25,6 +26,7 @@
             ]
         },
         {
+            "name": "Blog - Articolo",
             "pattern": "/:loc/blog/:postTitle/:postId",
             "behaviour": {
                 "ctrl": "\\bamboo\\blog\\controllers\\CBlogSingleController"
