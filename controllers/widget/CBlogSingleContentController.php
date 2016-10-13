@@ -38,7 +38,7 @@ class CBlogSingleContentController extends ANodeController {
                                                   "content" =>$this->dataBag->entity->author]));
 
 
-		} catch (\Exception $e) {
+		} catch (\Throwable $e) {
 		}
 
 		$this->view->pass('app', $this->helper);
