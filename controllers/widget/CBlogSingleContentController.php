@@ -18,22 +18,22 @@ class CBlogSingleContentController extends ANodeController {
 		$this->fetchData();
 
 		try {
-			$this->app->getBubbledObj('headTags')->add(
+			$this->app->router->response()->addHeadTag(
 				new CHeadTag('meta', null, null, ["property" => "fb:app_id",
                                                   "content" => $this->app->cfg()->fetch('miscellaneous','facebook')['app_id']]));
-			$this->app->getBubbledObj('headTags')->add(
+			$this->app->router->response()->addHeadTag(
 				new CHeadTag('meta', null, null, ["property" => "og:url",
                                                   "content" => $this->app->baseUrl(false).$this->app->router->request()->getUrlPath()]));
-			$this->app->getBubbledObj('headTags')->add(
+			$this->app->router->response()->addHeadTag(
 				new CHeadTag('meta', null, null, ["property" => "og:type",
                                                   "content" => "article"]));
-			$this->app->getBubbledObj('headTags')->add(
+			$this->app->router->response()->addHeadTag(
 				new CHeadTag('meta', null, null, ["property" => "og:title",
                                                   "content" => $this->dataBag->entity->postTranslation->getFirst()->title]));
-			$this->app->getBubbledObj('headTags')->add(
+			$this->app->router->response()->addHeadTag(
 				new CHeadTag('meta', null, null, ["property" => "og:image",
                                                   "content" => $this->helper->image($this->dataBag->entity->postTranslation->getFirst()->coverImage)]));
-			$this->app->getBubbledObj('headTags')->add(
+			$this->app->router->response()->addHeadTag(
 				new CHeadTag('meta', null, null, ["property" => "article:author",
                                                   "content" =>$this->dataBag->entity->author]));
 

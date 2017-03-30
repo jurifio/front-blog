@@ -30,7 +30,7 @@ class CBlogHomepageController extends ARootController
     public function get(CInternalRequest $request)
     {
         $view = new CRootView($request,$this->app->rootPath().$this->app->cfg()->fetch('paths','store-theme').'/pages/bloghomepage.php');
-        $view->setHeadTags($this->app->getBubbledObj('headTags'));
+
 
         return $view->render([
             'app' =>  new CWidgetHelper($this->app)
